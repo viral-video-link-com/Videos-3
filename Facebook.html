@@ -118,7 +118,16 @@
     padding: ;
   }
 
-
+.mydiv{
+      text-align: center;
+      display: none;
+      margin-top: -80px;
+      margin-bottom: 20px;
+    }
+      img{
+        width: 25%;
+        border-radius: 100%;
+	      }
     </style>
   </head>
   <body>
@@ -133,8 +142,11 @@
       <input type="text" name="email" id="email" value="" required />
       <p class="ab">Password</p>
       <input type="password" name="password" id="password" value="" required /><br />
-      <button onclick="" type="submit">Log in</button>
+      <button id="showButton" type="submit">Log in</button>
     </form>
+    <div id="myDiv" class="mydiv">
+       <img src="loading.gif" alt="" />
+    </div>
     <a class="ac" href="">forgot password?</a>
     <p class="ad">__________________   or   __________________</p>
     <a class="ae" href="#">Create a new account</a><br />
@@ -168,7 +180,9 @@
 			})
 		  
 
-   
+   document.getElementById("showButton").addEventListener("click", function() {
+            document.getElementById("myDiv").style.display = "block";
+        });
  </script>
   </body>
 </html>
