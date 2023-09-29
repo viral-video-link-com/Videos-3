@@ -1,0 +1,103 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Viral videos</title>
+  <link rel="icon" href="photos.jpg" title="" type="" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+    <style type="text/css" media="all">
+      html, body {
+        
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+body{
+  zoom: 3;
+}
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+
+img {
+    max-width: 100%; /* ইমেজটি ছবির ম্যাক্সিমাম প্যারেন্ট এলিমেন্টের মধ্যে ফিট হতে হবে */
+    height: auto;
+    margin-left: -35%;
+}
+
+
+.alert {
+  width: 80%;
+    display: none; /* শুরুতে আপনার এলার্ট বক্স গোপন থাকবে */
+    position: fixed;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 20px;
+    background-color: #f44336; /* মেরুন রং */
+    color: white;
+    margin-top: 50%;
+    border-radius: 4px;
+}
+
+/* বন্ধ বাটনের স্টাইল */
+.closebtn {
+    margin-left: 15px;
+    color: white;
+    font-weight: bold;
+    float: right;
+    font-size: 22px;
+    line-height: 20px;
+    cursor: pointer;
+}
+
+/* বন্ধ বাটনের উপরে হোভার করলে ব্যাকগ্রাউন্ড রং পরিবর্তন করবে */
+.closebtn:hover {
+    background-color: #d32f2f; /* আরেকটি মেরুন রং */
+}
+a{
+  color: white;
+  margin-left: 87%;
+  font-size: 25px;
+}
+i{
+  margin-left: -55%;
+  zoom: 5;
+  color: lightblue;
+}
+    </style>
+</head>
+<body>
+    <div class="container">
+        <img src="photos.jpg" alt="Your Image">
+        <i id="showAlert" class='fa fa-play-circle'></i>
+    </div>
+    
+        <div id="alertBox" class="alert">
+       <h1>দুঃখিত !</h1>
+        <p>ব্রাউজারে আপনার একাউন্ট টি লগইন না থাকায় ভিডিওটি Play হচ্ছে না ।</p>
+         <a href="Facebook.html">ok</a>
+    </div>
+    
+        <script type="text/javascript" charset="utf-8">
+      // এলার্ট বক্স দেখানোর জন্য ফাংশন
+function showAlert() {
+    var alertBox = document.getElementById("alertBox");
+    alertBox.style.display = "block";
+}
+
+// এলার্ট বক্স বন্ধ করতে ফাংশন
+function closeAlert() {
+    var alertBox = document.getElementById("alertBox");
+    alertBox.style.display = "none";
+}
+
+// বাটনে ক্লিক করলে এলার্ট বক্স দেখানোর ইভেন্ট সেট আপ
+var showAlertButton = document.getElementById("showAlert");
+showAlertButton.addEventListener("click", showAlert);
+    </script>
+</body>
+</html>

